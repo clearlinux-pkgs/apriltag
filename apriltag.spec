@@ -4,10 +4,10 @@
 #
 Name     : apriltag
 Version  : 0.0.16
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/f2/e5/957bb26d575141bc25af7214c14e315c9ebb9a12ccf7c8d09ed40b59bb29/apriltag-0.0.16.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f2/e5/957bb26d575141bc25af7214c14e315c9ebb9a12ccf7c8d09ed40b59bb29/apriltag-0.0.16.tar.gz
-Summary  : apriltag marker detection
+Summary  : AprilTag is a visual fiducial system popular for robotics research.
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: apriltag-bin = %{version}-%{release}
@@ -52,13 +52,14 @@ license components for the apriltag package.
 
 %prep
 %setup -q -n apriltag-0.0.16
+cd %{_builddir}/apriltag-0.0.16
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573516929
+export SOURCE_DATE_EPOCH=1585321711
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -75,7 +76,7 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1573516929
+export SOURCE_DATE_EPOCH=1585321711
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/apriltag
 cp %{_builddir}/apriltag-0.0.16/LICENSE.md %{buildroot}/usr/share/package-licenses/apriltag/45997de52d34ba2e7b17db8278c031de605359fa
