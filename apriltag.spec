@@ -4,7 +4,7 @@
 #
 Name     : apriltag
 Version  : 0.0.16
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/f2/e5/957bb26d575141bc25af7214c14e315c9ebb9a12ccf7c8d09ed40b59bb29/apriltag-0.0.16.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f2/e5/957bb26d575141bc25af7214c14e315c9ebb9a12ccf7c8d09ed40b59bb29/apriltag-0.0.16.tar.gz
 Summary  : AprilTag is a visual fiducial system popular for robotics research.
